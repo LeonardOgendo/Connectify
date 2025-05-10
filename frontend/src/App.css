@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: #333;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.main {
+   margin-top: 30px;
+}
+.head{
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.content {
+    border: 1px solid #777;
+    border-radius: 7px;
+    padding: 10px 25px;
+}
+
+.content .title {
+    margin-bottom: 10px;
+    color: #f24236;
+    font-weight: 600;
+}
+
+.content .message {
+    color: #fff;
+    font-size: 0.85rem;
+}

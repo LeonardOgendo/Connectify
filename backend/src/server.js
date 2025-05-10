@@ -1,18 +1,27 @@
 import dotenv from 'dotenv';
 import express from 'express';
+import cors from 'cors';
 
 dotenv.config();
 
 const app = express();
 
-// Simple routes
-app.get('/', (req, res) => {
-    res.send('Getting Started');
+// Middleware to parse JSON
+app.use(express.json());
+
+// Enable CORS (Allow frontend to access backend)
+app.use(cors())
+
+// API endpoint
+app.get('/api/content', (req, res) => {
+    res.json({
+        content: {
+            title: "Communicating with Backend",
+            message: "Communication successful! Hello from Backend"
+        }
+    });
 });
 
-app.get('/about', (req, res) => {
-    res.send('Learn more about us');
-});
 
 // Start server
 const PORT = process.env.PORT;
